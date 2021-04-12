@@ -34,7 +34,7 @@ class sample extends Component {
 
         // create new list based on keyword
         let newList = this.state.peopleList.filter((people) => {
-            return (people.name.first.includes(event.target.value))
+            return (people.name.first.toLowerCase().includes(event.target.value))
         })
 
         // update the filteredList, which is the one being displayed in the table

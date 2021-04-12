@@ -4,6 +4,6 @@ import axios from "axios";
 
 export default {
   getTenPeople: function() {
-    return axios.get("https://randomuser.me/api/?results=10");
+    return axios.get("https://randomuser.me/api/?results=100");
   }
 };
