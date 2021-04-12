@@ -29,12 +29,15 @@ class sample extends Component {
 
     filter = (event) => {
 
+        //update keyword
         this.setState({ keyword: event.target.value });
 
+        // create new list based on keyword
         let newList = this.state.peopleList.filter((people) => {
             return (people.name.first.includes(event.target.value))
         })
 
+        // update the filteredList, which is the one being displayed in the table
         this.setState({
             filteredPeopleList: newList
         })
@@ -58,10 +61,10 @@ class sample extends Component {
             <Table striped bordered hover variant="dark">
             <thead>
               <tr>
-                <th>#</th>
+                <th>Image</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Username</th>
+                <th>email</th>
               </tr>
             </thead>
             <tbody>
@@ -69,10 +72,10 @@ class sample extends Component {
                     this.state.filteredPeopleList.map((people) => {
                         return (
                             <tr>
-                                <td>1</td>
+                                <td><img src={people.picture.thumbnail} alt="employee pic"></img></td>
                                 <td>{people.name.first}</td>
                                 <td>{people.name.last}</td>
-                                <td>@mdo</td>
+                                <td>{people.email}</td>
                             </tr>
                         )
                     })
