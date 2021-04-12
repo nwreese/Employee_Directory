@@ -3,7 +3,7 @@ This employee directory application is made with React and allows the user to vi
 # Deployment 
 Application deployed at https://nwreese.github.io/Employee_Directory/
 # Screenshots
-<img src = "employee_directory.png">
+<img src = "employeedirectory/employee_directory.png">
 <br>
 <img src = "employee_directory2.png">
 <br>
