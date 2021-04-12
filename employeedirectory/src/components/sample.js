@@ -44,6 +44,19 @@ class sample extends Component {
         
     }
 
+    Sort = (event) => {
+        let peopleList = this.state.peopleList;
+        peopleList.sort((a,b) => {
+            if (a.email < b.email) {
+                return -1;
+            }
+            if (a.email > b.email) {
+                return 1;
+            }
+        })
+        this.setState({filteredPeopleList: peopleList})
+    }
+
     render() {
         return (
             <>
@@ -64,7 +77,9 @@ class sample extends Component {
                 <th>Image</th>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>email</th>
+                <th>email 
+                <button onClick={this.Sort}>Sort</button>
+                </th>
               </tr>
             </thead>
             <tbody>
