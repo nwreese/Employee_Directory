@@ -5,6 +5,6 @@ Application deployed at https://nwreese.github.io/Employee_Directory/
 # Screenshots
 <img src = "employeedirectory/employee_directory.png">
 <br>
-<img src = "employee_directory2.png">
+<img src = "employeedirectory/employee_directory2.png">
 <br>
-<img src = "employee_directory3.png">
+<img src = "employeedirectory/employee_directory3.png">
