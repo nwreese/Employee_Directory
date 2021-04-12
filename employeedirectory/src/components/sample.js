@@ -13,7 +13,6 @@ class sample extends Component {
       };
 
     componentDidMount() {
-        // const data = API.getTenPeople(); --> wrong
 
         API.getTenPeople()
         .then((data) => {
@@ -60,15 +59,7 @@ class sample extends Component {
     render() {
         return (
             <>
-             {/* <InputGroup className="mb-3">
-                <FormControl
-                placeholder="Username"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-                onChange={this.filter()}
-                />
-            </InputGroup> */}
-
+            
             <input type="text" onChange={this.filter}></input>
 
             <Table striped bordered hover variant="dark">
