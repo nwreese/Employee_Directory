@@ -42,7 +42,7 @@ class sample extends Component {
         })
         
     }
-
+// sorting emails alphabetically 
     Sort = (event) => {
         let peopleList = this.state.peopleList;
         peopleList.sort((a,b) => {
@@ -55,6 +55,33 @@ class sample extends Component {
         })
         this.setState({filteredPeopleList: peopleList})
     }
+// sorting last name alphabetically 
+    SortByLastName = (event) => {
+        let peopleList = this.state.peopleList;
+        peopleList.sort((a,b) => {
+            if (a.name.last < b.name.last) {
+                return -1;
+            }
+            if (a.name.last > b.name.last) {
+                return 1;
+            }
+        })
+        this.setState({filteredPeopleList: peopleList})
+    }
+// sorting first name alphabetically 
+SortByFirstname = (event) => {
+    let peopleList = this.state.peopleList;
+    peopleList.sort((a,b) => {
+        if (a.name.first < b.name.first) {
+            return -1;
+        }
+        if (a.name.first > b.name.first) {
+            return 1;
+        }
+    })
+    this.setState({filteredPeopleList: peopleList})
+}
+
 
     render() {
         return (
@@ -66,10 +93,9 @@ class sample extends Component {
             <thead>
               <tr>
                 <th>Image</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>email 
-                <button onClick={this.Sort}>Sort</button>
+                <th>First Name  <button onClick={this.SortByFirstname}>Sort</button> </th>
+                <th>Last Name  <button onClick={this.SortByLastName}>Sort</button></th>
+                <th>email  <button onClick={this.Sort}>Sort</button>
                 </th>
               </tr>
             </thead>
