@@ -7,7 +7,12 @@ Application deployed at https://nwreese.github.io/Employee_Directory/
 # Screenshots
 <img src = "employeedirectory/employee_directory4.png">
 <br>
+<img src = "employeedirectory/employee_directory7.png">
+<br>
 <img src = "employeedirectory/employee_directory5.png">
+
+# Installation
+If running locally, enter npm i to install dependencies. 
 
 # Questions
 email: nwreese@kent.edu
